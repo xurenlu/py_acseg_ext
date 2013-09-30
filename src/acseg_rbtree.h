@@ -8,13 +8,12 @@
 
 #include <stdlib.h>
 #include <stdint.h>
-
+#include "uchar.h"
 typedef uint64_t  acseg_rbtree_key_t;
 
 typedef struct acseg_rbtree_node_s  acseg_rbtree_node_t;
 
 typedef struct acseg_rbtree_s  acseg_rbtree_t;
-
 struct acseg_rbtree_node_s {
     acseg_rbtree_key_t       key;
     acseg_rbtree_node_t     *left;

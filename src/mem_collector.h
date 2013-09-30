@@ -6,9 +6,9 @@
 #define MEM_COLLECTOR_H_INCLUDED_
 
 #include <stdlib.h>
-
+#include "uchar.h"
 typedef struct mc_collector_s mc_collector_t;
-
+//typedef unsigned char u_char;
 struct mc_collector_s {
 	mc_collector_t **self;
 	mc_collector_t *next;

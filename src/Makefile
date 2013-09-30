@@ -4,7 +4,7 @@ OBJECTS = acseg_util.o acseg_rbtree.o acseg_tree.o mem_collector.o test.o
 
 all:test
 
-$(OBJECTS):acseg_util.h acseg_rbtree.h acseg_tree.h mem_collector.h
+$(OBJECTS):acseg_util.h acseg_rbtree.h acseg_tree.h mem_collector.h uchar.h
 
 test: $(OBJECTS)
 	gcc -O1 -o test $(OBJECTS)

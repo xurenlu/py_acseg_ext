@@ -6,6 +6,8 @@
 #include "acseg_util.h"
 #include "acseg_tree.h"
 
+#define DD 
+//printf("got here :%s,%d\n",__FILE__,__LINE__);
 typedef struct {
 	PyObject_HEAD	
 	acseg_index_t *index;
@@ -14,12 +16,14 @@ typedef struct {
 static PyObject *
 AcIndex_new(PyTypeObject *type, PyObject *args, PyObject *kwds)
 {
+	DD
     AcIndex *self;
 
     self = (AcIndex *)type->tp_alloc(type, 0);
 
 	self->index = NULL;
-
+	//acseg_destory_index(&(self->index));
+	//self->index = acseg_index_init();
     return (PyObject *)self;
 
 }
@@ -27,7 +31,9 @@ AcIndex_new(PyTypeObject *type, PyObject *args, PyObject *kwds)
 static int 
 AcIndex_init(AcIndex *self, PyObject *args, PyObject *kwds)
 {
-	self->index = acseg_index_init();
+
+	DD
+    self->index = acseg_index_init();
 
 	return 0;
 }
@@ -35,6 +41,7 @@ AcIndex_init(AcIndex *self, PyObject *args, PyObject *kwds)
 static void
 AcIndex_dealloc(AcIndex *self)
 {
+	DD
 	acseg_destory_index(&(self->index));
 	self->ob_type->tp_free((PyObject*)self);
 }
@@ -42,6 +49,7 @@ AcIndex_dealloc(AcIndex *self)
 static PyObject *
 AcIndex_load_dict(AcIndex *self, PyObject *args)
 {
+	DD
 	const char *fpath;
 	if (!PyArg_ParseTuple(args, "s", &fpath)){
 		PyErr_SetString(PyExc_TypeError, "load dict takes exactly one argument (0 given)");
@@ -60,6 +68,7 @@ AcIndex_load_dict(AcIndex *self, PyObject *args)
 static PyObject *
 AcIndex_add_word(AcIndex *self, PyObject *args)
 {
+	DD
 	acseg_str_t phrase;
 	if (!PyArg_ParseTuple(args, "s#", &(phrase.data), &(phrase.len))){
 		PyErr_SetString(PyExc_TypeError, "add word takes exactly one argument (0 given)");
@@ -77,6 +86,7 @@ AcIndex_add_word(AcIndex *self, PyObject *args)
 PyObject *
 AcIndex_fix_index(AcIndex *self, PyObject *args)
 {
+	DD
 	acseg_index_fix(self->index);
 	Py_INCREF(Py_None);
 	return Py_None;
@@ -85,6 +95,7 @@ AcIndex_fix_index(AcIndex *self, PyObject *args)
 PyObject *
 AcIndex_full_seg(AcIndex *self, PyObject *args)
 {
+	DD
 	int i;
 
 	acseg_str_t text;
@@ -96,37 +107,46 @@ AcIndex_full_seg(AcIndex *self, PyObject *args)
 	acseg_list_item_t *result_item;
 
 	PyObject* item_list;
+        char * p;
+        long str_len=0;
     int k;
     k=0;
-    int x;
-    x=0;
-	if (!PyArg_ParseTuple(args, "s#|ii", &(text.data), &(text.len),&k,&x)){
+   
+    DD
+    //p =malloc(sizeof(char)*4096);
+    //bzero(p,64*1024);
+	if (!PyArg_ParseTuple(args, "si",&p,&k)){
 		PyErr_SetString(PyExc_TypeError, "full_seg takes exactly one argument or two argument");
 		return NULL;	
 	}
-    if(x==0)
+	DD
+	printf("k:%d\n",k);
+      
+	printf("text:%s\n",p);
+	DD
+        text.data = p;
+        text.len = strlen(p);
+    
 	seg_result = acseg_full_seg(self->index, &text,k);
-    if(x==2){
-	seg_result = acseg_full_seg2(self->index, &text,k);
-    }
-    if(x==3){
-	seg_result = acseg_full_seg3(self->index, &text,k);
-    }
-
+    
+    DD
 	if (!seg_result){
+		DD
 		return PyList_New(0);
 	}
-
+DD
 	i = 0;
     result_item = seg_result->list->first;
     item_list = PyList_New(seg_result->num);
+    DD
 	while(result_item){
+		DD
 		phrase = (acseg_str_t *) result_item->data;	
 		PyList_SetItem(item_list, i, Py_BuildValue("s#", phrase->data, phrase->len));
 		result_item = result_item->next;
 		i = i + 1;
 	}
-
+DD
 	acseg_destory_result(&seg_result);
 
     return item_list;
