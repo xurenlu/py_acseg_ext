@@ -1,0 +1,108 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ACSEG_UTIL_H_INCLUDED_	acseg_util.h	5;"	d
+AC_INDEX_FIXED	acseg_tree.h	/^	AC_INDEX_FIXED$/;"	e	enum:__anon1
+AC_INDEX_UNFIXED	acseg_tree.h	/^	AC_INDEX_UNFIXED,$/;"	e	enum:__anon1
+MEM_COLLECTOR_H_INCLUDED_	mem_collector.h	6;"	d
+OBJECTS	Makefile	/^OBJECTS = acseg_util.o acseg_rbtree.o acseg_tree.o mem_collector.o test.o$/;"	m
+_ACSEG_RBTREE_H_INCLUDED_	acseg_rbtree.h	7;"	d
+_AC_SEG_TREE_H_INCLUDED_	acseg_tree.h	5;"	d
+acseg_const_str_t	acseg_util.h	/^} acseg_const_str_t;$/;"	t	typeref:struct:__anon4
+acseg_copy_str_t	acseg_util.c	/^acseg_copy_str_t(acseg_str_t *dest, acseg_str_t *src, mc_collector_t **mc)$/;"	f
+acseg_destory_index	acseg_tree.c	/^acseg_destory_index(acseg_index_t **acseg_index)$/;"	f
+acseg_destory_result	acseg_tree.c	/^acseg_destory_result(acseg_result_t **result)$/;"	f
+acseg_full_seg	acseg_tree.c	/^acseg_full_seg(acseg_index_t *acseg_index, acseg_str_t *text)$/;"	f
+acseg_index_add	acseg_tree.c	/^acseg_index_add(acseg_index_t *acseg_index, acseg_str_t *phrase)$/;"	f
+acseg_index_fix	acseg_tree.c	/^acseg_index_fix(acseg_index_t *acseg_index)$/;"	f
+acseg_index_init	acseg_tree.c	/^acseg_index_init(void)$/;"	f
+acseg_index_item_s	acseg_tree.h	/^struct acseg_index_item_s {$/;"	s
+acseg_index_item_t	acseg_tree.h	/^typedef struct acseg_index_item_s acseg_index_item_t;$/;"	t	typeref:struct:acseg_index_item_s
+acseg_index_load	acseg_tree.c	/^acseg_index_load(acseg_index_t *acseg_index, const char *fpath)$/;"	f
+acseg_index_s	acseg_tree.h	/^struct acseg_index_s {$/;"	s
+acseg_index_state	acseg_tree.h	/^} acseg_index_state;$/;"	t	typeref:enum:__anon1
+acseg_index_t	acseg_tree.h	/^typedef struct acseg_index_s  acseg_index_t;$/;"	t	typeref:struct:acseg_index_s
+acseg_list_add	acseg_util.c	/^acseg_list_add(acseg_list_t *list, void *data, mc_collector_t **mc)$/;"	f
+acseg_list_extend	acseg_util.c	/^acseg_list_extend(acseg_list_t *list, acseg_list_t *addon, mc_collector_t **mc)$/;"	f
+acseg_list_init	acseg_util.c	/^acseg_list_init(mc_collector_t **mc)$/;"	f
+acseg_list_item_s	acseg_util.h	/^struct acseg_list_item_s {$/;"	s
+acseg_list_item_t	acseg_util.h	/^typedef struct acseg_list_item_s acseg_list_item_t;$/;"	t	typeref:struct:acseg_list_item_s
+acseg_list_t	acseg_util.h	/^} acseg_list_t;$/;"	t	typeref:struct:__anon5
+acseg_queue_pop	acseg_util.c	/^acseg_queue_pop(acseg_list_t *list)$/;"	f
+acseg_queue_push	acseg_util.c	/^acseg_queue_push(acseg_list_t *list, void *data, mc_collector_t **mc)$/;"	f
+acseg_rbt_black	acseg_rbtree.h	52;"	d
+acseg_rbt_copy_color	acseg_rbtree.h	55;"	d
+acseg_rbt_is_black	acseg_rbtree.h	54;"	d
+acseg_rbt_is_red	acseg_rbtree.h	53;"	d
+acseg_rbt_red	acseg_rbtree.h	51;"	d
+acseg_rbtree_delete	acseg_rbtree.c	/^acseg_rbtree_delete(acseg_rbtree_t *tree, acseg_rbtree_node_t *node)$/;"	f
+acseg_rbtree_init	acseg_rbtree.h	38;"	d
+acseg_rbtree_insert	acseg_rbtree.c	/^acseg_rbtree_insert(acseg_rbtree_t *tree, acseg_rbtree_node_t *node)$/;"	f
+acseg_rbtree_insert_pt	acseg_rbtree.h	/^typedef acseg_rbtree_node_t * (*acseg_rbtree_insert_pt) (acseg_rbtree_node_t*root, $/;"	t
+acseg_rbtree_insert_value	acseg_rbtree.c	/^acseg_rbtree_insert_value(acseg_rbtree_node_t *temp, acseg_rbtree_node_t *node,$/;"	f
+acseg_rbtree_key_t	acseg_rbtree.h	/^typedef uint64_t  acseg_rbtree_key_t;$/;"	t
+acseg_rbtree_left_rotate	acseg_rbtree.c	/^acseg_rbtree_left_rotate(acseg_rbtree_node_t **root, acseg_rbtree_node_t *sentinel,$/;"	f	file:
+acseg_rbtree_min	acseg_rbtree.h	/^acseg_rbtree_min(acseg_rbtree_node_t *node, acseg_rbtree_node_t *sentinel)$/;"	f
+acseg_rbtree_node_s	acseg_rbtree.h	/^struct acseg_rbtree_node_s {$/;"	s
+acseg_rbtree_node_t	acseg_rbtree.h	/^typedef struct acseg_rbtree_node_s  acseg_rbtree_node_t;$/;"	t	typeref:struct:acseg_rbtree_node_s
+acseg_rbtree_right_rotate	acseg_rbtree.c	/^acseg_rbtree_right_rotate(acseg_rbtree_node_t **root, acseg_rbtree_node_t *sentinel,$/;"	f	file:
+acseg_rbtree_s	acseg_rbtree.h	/^struct acseg_rbtree_s {$/;"	s
+acseg_rbtree_search	acseg_rbtree.c	/^acseg_rbtree_search(acseg_rbtree_t *tree, acseg_rbtree_key_t key)$/;"	f
+acseg_rbtree_sentinel_init	acseg_rbtree.h	60;"	d
+acseg_rbtree_t	acseg_rbtree.h	/^typedef struct acseg_rbtree_s  acseg_rbtree_t;$/;"	t	typeref:struct:acseg_rbtree_s
+acseg_result_init	acseg_tree.c	/^acseg_result_init(void)$/;"	f	file:
+acseg_result_t	acseg_tree.h	/^} acseg_result_t;$/;"	t	typeref:struct:__anon2
+acseg_str_t	acseg_util.h	/^} acseg_str_t;$/;"	t	typeref:struct:__anon3
+add_all_item_to_queue	acseg_tree.c	/^add_all_item_to_queue(acseg_rbtree_node_t *node, $/;"	f	file:
+add_to_result	acseg_tree.c	/^add_to_result(acseg_result_t *result, acseg_list_t *addon_list)$/;"	f	file:
+atom	acseg_tree.h	/^	acseg_str_t atom;$/;"	m	struct:acseg_index_item_s
+childs_rbtree	acseg_tree.h	/^	acseg_rbtree_t *childs_rbtree;$/;"	m	struct:acseg_index_item_s
+color	acseg_rbtree.h	/^    u_char                 color;$/;"	m	struct:acseg_rbtree_node_s
+create_index_item	acseg_tree.c	/^create_index_item(acseg_str_t *atom, acseg_rbtree_node_t $/;"	f	file:
+create_rbtree_node	acseg_tree.c	/^create_rbtree_node(acseg_rbtree_key_t key, void *data, mc_collector_t **mc)$/;"	f	file:
+data	acseg_rbtree.h	/^	void *data;$/;"	m	struct:acseg_rbtree_node_s
+data	acseg_util.h	/^	const u_char *data;$/;"	m	struct:__anon4
+data	acseg_util.h	/^	u_char     *data;$/;"	m	struct:__anon3
+data	acseg_util.h	/^	void *data;$/;"	m	struct:acseg_list_item_s
+extra_outputs	acseg_tree.h	/^	acseg_list_t *extra_outputs;$/;"	m	struct:acseg_index_item_s
+failure	acseg_tree.h	/^	acseg_index_item_t *failure;$/;"	m	struct:acseg_index_item_s
+find_child_index_item	acseg_tree.c	/^find_child_index_item(acseg_index_item_t *index_item, acseg_str_t *atom)$/;"	f	file:
+first	acseg_util.h	/^	acseg_list_item_t *first;$/;"	m	struct:__anon5
+get_mblen	acseg_util.c	/^get_mblen(u_char ch)$/;"	f
+get_word_size	acseg_util.c	/^get_word_size(const char *word, unsigned int word_len)$/;"	f
+insert	acseg_rbtree.h	/^	acseg_rbtree_insert_pt   insert;$/;"	m	struct:acseg_rbtree_s
+key	acseg_rbtree.h	/^    acseg_rbtree_key_t       key;$/;"	m	struct:acseg_rbtree_node_s
+last	acseg_util.h	/^	acseg_list_item_t *last;$/;"	m	struct:__anon5
+left	acseg_rbtree.h	/^    acseg_rbtree_node_t     *left;$/;"	m	struct:acseg_rbtree_node_s
+len	acseg_util.h	/^	size_t      len;$/;"	m	struct:__anon3
+len	acseg_util.h	/^	size_t len;$/;"	m	struct:__anon4
+list	acseg_tree.h	/^	acseg_list_t *list;$/;"	m	struct:__anon2
+main	test.c	/^int main(int argc, char **argv)$/;"	f
+main	test2.c	/^int main(int argc, char **argv){$/;"	f
+mblen_table_utf8	acseg_util.c	/^static unsigned char mblen_table_utf8[] = $/;"	v	file:
+mc	acseg_tree.h	/^	mc_collector_t *mc;$/;"	m	struct:__anon2
+mc	acseg_tree.h	/^	mc_collector_t *mc;$/;"	m	struct:acseg_index_s
+mc_calloc	mem_collector.c	/^mc_calloc(mc_collector_t **mc, size_t size)$/;"	f
+mc_collector_s	mem_collector.h	/^struct mc_collector_s {$/;"	s
+mc_collector_t	mem_collector.h	/^typedef struct mc_collector_s mc_collector_t;$/;"	t	typeref:struct:mc_collector_s
+mc_destory	mem_collector.c	/^mc_destory(mc_collector_t *mc)$/;"	f
+mc_free	mem_collector.c	/^mc_free(void *data)$/;"	f
+mc_malloc	mem_collector.c	/^mc_malloc(mc_collector_t **mc, size_t size)$/;"	f
+next	acseg_util.h	/^	acseg_list_item_t *next;$/;"	m	struct:acseg_list_item_s
+next	mem_collector.h	/^	mc_collector_t *next;$/;"	m	struct:mc_collector_s
+num	acseg_tree.h	/^	unsigned int num;$/;"	m	struct:__anon2
+ord_utf8_wch	acseg_util.c	/^ord_utf8_wch(const char *wch_str)$/;"	f
+output	acseg_tree.h	/^	acseg_list_t *output;$/;"	m	struct:acseg_index_item_s
+parent	acseg_rbtree.h	/^    acseg_rbtree_node_t     *parent;$/;"	m	struct:acseg_rbtree_node_s
+print_atom	acseg_tree.c	/^void print_atom(acseg_str_t *atom){$/;"	f
+print_time	test.c	/^void print_time(const char *name){$/;"	f
+right	acseg_rbtree.h	/^    acseg_rbtree_node_t     *right;$/;"	m	struct:acseg_rbtree_node_s
+root	acseg_rbtree.h	/^    acseg_rbtree_node_t     *root;$/;"	m	struct:acseg_rbtree_s
+root	acseg_tree.h	/^	acseg_index_item_t *root;$/;"	m	struct:acseg_index_s
+self	mem_collector.h	/^	mc_collector_t **self;$/;"	m	struct:mc_collector_s
+sentinel	acseg_rbtree.h	/^    acseg_rbtree_node_t     *sentinel;$/;"	m	struct:acseg_rbtree_s
+set_index_item_failure	acseg_tree.c	/^set_index_item_failure(acseg_list_t *index_item_list, acseg_index_item_t *failure)$/;"	f	file:
+state	acseg_tree.h	/^	acseg_index_state state;$/;"	m	struct:acseg_index_s
